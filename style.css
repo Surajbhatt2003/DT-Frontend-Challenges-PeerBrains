@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header styles */
+.header {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    background: #F0F0F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    margin-right: 1rem;
+}
+
+.header .header-ul {
+    display: flex;
+    padding: .5rem;
+
+}
+
+.header .header-icons {
+    margin: .3rem;
+    padding: .4rem;
+    list-style: none;
+    color: #fff;
+    background: #3683F0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header-nav .personal-img {
+    width: 30%;
+}
+
+.header-nav .setting-icon {
+    margin: .7rem;
+    font-size: 1.4rem;
+}
+
+.log img {
+    margin-top: 10px;  
+    margin-left: 100px;
+    width: 300px;
+    height: 45px;
+}
+
+/* content-body styles */
+.content-body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-top: 0rem;
+}
+
+/* vertical-nav styles */
+.vertical-nav {
+    width: 30%;
+    margin: .5rem;
+    border-right: 2px solid #7b7878;
+    display: none;
+    transition: all 55s;
+    height: 197px;
+}
+
+.active {
+    display: block;
+}
+
+.active-menu-icon {
+    color: #fff;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    display: block;
+    padding: .8rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.vertical-nav-title {
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    color: #fff;
+    background-color: black;
+}
+
+.vertical-nav ul {
+    padding: 1.3rem;
+}
+
+.list-title {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    font-weight: 700;
+}
+
+.vertical-nav-task {
+    font-size: 1rem;
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+.vertical-nav-task a {
+    text-decoration: none;
+    color: black;
+}
+
+/* assets */
+.assets-contaner {
+    position: relative;
+    width: 90%;
+    margin: 0 5rem;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.assets-contaner-header {
+    line-height: 42px;
+    padding: .6rem;
+    width: 95%;
+    height: 42px;
+    top: 108px;
+    left: 187px;
+    margin-left: 1rem;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0029FF;
+    background: fff;
+    text-transform: capitalize;
+    display: flex; 
+    justify-content: space-between;  
+    padding: 0 20px; 
+    margin-top: 15px; 
+}
+
+.assets-contaner-header button {
+    background-color: #0029FF; 
+    border: none; 
+    color: white; 
+    padding: 10px 10px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 2px 2px; 
+    cursor: pointer; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 121px;
+    height: 36px;
+    top: 108px;
+    left: 1132px;
+}
+
+.assets-contaner-header p {
+    margin-left: 2rem;
+}
+
+.asset-title {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+}
+
+.newDiv {
+    background: #E9ECEF;
+    border-radius: 5px;
+    padding: 20px;
+    width: 95%;
+}
+
+.newDiv p { 
+    font-weight: 400;
+}
+
+.asset-title h2 {
+    font-weight: 700;
+}
+
+/* card styles */
+.task-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.task-card {
+    position: relative;
+    width: 45%;
+    margin-bottom: 1.3rem;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-headding {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+
+.card-body {
+    font-size: 1.3rem;
+}
+
+.card-body .asset>* {
+    width: 100%;
+}
+
+.card-body iframe {
+    min-height: 70vh;
+}
+
+.card-body .more {
+    display: none;
+}
+
+.card-body .more-active {
+    display: block;
+}
+
+.card-body span {
+    font-weight: bold;
+    color: #4e4d4d;
+}
+
+.card-footer {
+    height: 7vh;
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 1.6rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.next {
+    position: relative;
+    left: 90%;
+    bottom: 0;
+    width: 8%;
+    height: 5vh;
+    font-size: 1.3rem;
+    margin: 1.3rem;
+    color: #fff;
+    background: #0029FF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* styles for phones screen */
+@media only screen and (max-width: 600px) {
+    .assets-contaner-header {
+        height: 12vh;
+    }
+
+    .task-card {
+        width: 90%;
+    }
+
+    .next {
+        position: relative;
+        left: 60%;
+        bottom: 0;
+        width: 20%;
+    }
+}
+
+.imgmycontainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: end;
+    gap: 10px;
+    margin-right: 1rem;
+}
+
+.imgmycontainer img {
+    border-radius: 50%;
+    background-color: #0029FF;
+    object-fit: cover;
+    padding: 10px;
+}

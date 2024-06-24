@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- fontawesome cdn  -->
+    <script src="https://kit.fontawesome.com/305a7970ac.js" crossorigin="anonymous"></script>
+
+    <title>DT Frontend Challenges</title>
+    <style>.notice-board {
+        position: fixed;
+        top: 70px; /* Adjust according to the position of your nav bar */
+        right: 20px; /* Adjust as needed */
+        width: 100px;
+        height: auto;
+        background-color: #000;
+        color: #fff;
+        border-radius: 5px;
+        opacity: 0.9;
+        display: none; /* Initially hidden */
+        z-index: 1000; /* Make sure it appears above other content */
+    }
+
+    .notice-board-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        border-bottom: 1px solid #fff;
+    }
+
+    .notice-board-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3px;
+    }
+
+    .notice-board-content p {
+        margin: 3px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .notice-toggle-btn {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 97.5%;
+        margin-top: 15px;
+    }
+
+    .notice-toggle-btn:hover {
+        background-color: #333;
+    }
+</style>
+</head>
+
+<body>
+    <!-- header -->
+    <section class="header">
+        <div class="nav-bar">
+            <div class="log">
+                <img src="https://deepthought.education/assets/images/logo/logo.svg" alt="logo" />
+            </div>
+            <nav class="header-nav">
+                <ul class="header-ul">
+                    <li class="header-icons"> <i class="fa-sharp fa-solid fa-house"></i> </li>
+                    <li class="header-icons"> <i class="fa-solid fa-screwdriver-wrench"></i> </li>
+                    <li class="header-icons"> <i class="fa-solid fa-bell"></i> </li>
+                </ul>
+                <div class="personal-img">
+                    <img src="/asset/Ellipse 53.png" alt="personal-image" />
+                </div>
+                <div class="setting-icon">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <button class="notice-toggle-btn" onclick="toggleNoticeBoard()">X</button>
+
+    <!-- content -->
+    <section class="content-body">
+        <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">
+            <img src="https://s3-alpha-sig.figma.com/img/fe6e/4937/e192363bc8a2c9c39ade7f24e1906488?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qrOGSglVUPPuEjWXw1aFYODSpPTB8XVg0zqwfmIwJHt6Tb4X7Pbdg6iIy82ZEA9IbuqQVK2XXNPymUclz1p8jujLkVHVbl9Z387tKDWrZO3BP6t~Gl0lXu0YlV5rnVoPsTbZB5H-PGuRXw3-K4qzPIMliS9Wcb16a8DxM6EGDsmgazreMtKL4sLD6cETuRBxtserqv4vXEobfTPkCEPPrbeD1oqXxUPObUtS9o-Xi0-1sUB6PbqKxBQCtQ19kGdCTELvgO1fHpmmpH7Hcstj9--tzmxVufGD1uXIWsbYOcC8wcb8E~amCWpdsi8A3w4QSo3afjOy~YlLm~oFdxGEIQ__" width="50%" height="50%">
+        </div>
+        <nav class="vertical-nav" id="vertical-nav">
+            <h3 class="vertical-nav-title">Journey Board</h3>
+            <ul>
+                <h4 class="list-title">Explore the world of management</h4>
+
+                <li class="vertical-nav-task"><a href="#task1">&#x2022;Technical project management</a></li>
+                
+                <li class="vertical-nav-task"><a href="#task2">&#x2022;Thread build</a></li>
+                 
+                <li class="vertical-nav-task"><a href="#task3"> &#x2022;Structure your pointer</a></li>
+                 
+                <li class="vertical-nav-task"><a href="#task4">&#x2022; 4SA Method</a></li>
+                
+                  
+            </ul> 
+            <hr>
+        </nav>    
+    
+        <div class="assets-contaner"> 
+            <div class="assets-contaner-header">
+                <span>Technical Project Management </span>
+                <button>Submit Task</button>
+            </div>
+            <div class="asset-title">
+                <div class="newDiv">
+                    <h2>Explore the world of management.</h2>
+                    <p>As a project manager, you play an important role in leading a project through initiation, planning, execution, monitoring, controlling, and completion. How? Do you want to manage each and every step of your life?</p>
+                </div>
+            </div>
+            <!-- task cards -->
+            <div class="task-container" id="task-container">
+                <!-- task card -->
+            </div>
+            <br>
+        </div>
+    </section>  
+    <!-- <button class="next">Next</button> -->
+    <span class="imgmycontainer">
+        <img class="quesimg" src="asset/1a61e9875a4e31e0b5da40fe87694dd9.png" width="37px" height="40px" alt="">
+        <img class="schimg" src="asset/9b8abad7a9c8d241fd0ab9eb6a9f95b5.png" width="40px" height="40px" alt="">
+        <img class="meetimg" src="asset/3870fdb52d83bb903bb6574487be8860.png" width="40px" height="40px" alt="">
+
+    </span>
+    <br>
+
+    <div class="notice-board" id="notice-board">
+        <div class="notice-board-header">
+            <span></span>
+            <button class="close-btn" onclick="toggleNoticeBoard()"> </button>
+        </div>
+        <div class="notice-board-content">
+            <p>N</p>
+            <p>o</p>
+            <p>t</p>
+            <p>i</p>
+            <p>c</p>
+            <p>e</p>
+            <p> </p>
+            <p>B</p>
+            <p>o</p>
+            <p>a</p>
+            <p>r</p>
+            <p>d</p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
